@@ -1,4 +1,4 @@
-package grails.mock.logging.sl4j.test
+package demo
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

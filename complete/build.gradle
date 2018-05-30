@@ -11,7 +11,7 @@ buildscript {
 }
 
 version "0.1"
-group "grails.mock.logging.sl4j.test"
+group "demo"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
