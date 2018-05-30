@@ -12,20 +12,20 @@ class AgeAdvisorSpec extends Specification {
 
     @Shared
     AgeAdvisor ageAdvisor = new AgeAdvisor()
+    @Shared
+    TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor")
 
     def cleanup() {
         TestLoggerFactory.clear()
     }
 
     void "verify young age logs"() {
-        when:
-        TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor")
 
+        when: "method is invoked"
         ageAdvisor.offerAgeAdvice(15)
-
         ImmutableList<LoggingEvent> loggingEvents = logger.getLoggingEvents()
 
-        then:
+        then: "check the logging events"
         loggingEvents.size() == 2
         loggingEvents[0].message == "You are a young and vibrant!"
         loggingEvents[0].level == Level.INFO
@@ -34,14 +34,12 @@ class AgeAdvisorSpec extends Specification {
     }
 
     void "verify old age logs"() {
-        when:
-        TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor")
 
+        when: "method is invoked"
         ageAdvisor.offerAgeAdvice(31)
-
         ImmutableList<LoggingEvent> loggingEvents = logger.getLoggingEvents()
 
-        then:
+        then: "check the logging events"
         loggingEvents.size() == 1
         loggingEvents[0].message == "It's all downhill from here, sorry."
         loggingEvents[0].level == Level.WARN
