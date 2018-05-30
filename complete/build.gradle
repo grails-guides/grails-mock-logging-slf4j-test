@@ -58,6 +58,11 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+    testCompile 'uk.org.lidalia:slf4j-test:1.1.0'
+}
+
+configurations {
+    testCompile.exclude group: 'ch.qos.logback', module: 'logback-classic'
 }
 
 bootRun {
