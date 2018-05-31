@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grails.mock.logging.sl4j.test
+        defaultPackage: demo
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events
