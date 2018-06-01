@@ -11,6 +11,8 @@ writingTheApp:
   offerAdvice: Offer Advice to a Person
 mockLogging:
     title: Mock Logging with Slf4j Test
+    verifyLogsInController: Verify Logs in Controller
+    verifyLogsInGroovyPogo: Verify Logs in Groovy POGO
 runningTheApp:
   title: Running the Application
 helpWithGrails:
