@@ -1,3 +1,13 @@
+We can verify that log events occur in the Controller with Slf4j Test. We will create a Grails Integration test so the Data Service gets
+injected automatically without the worry of mocking. We will use `RestBuilder` to interact over HTTP with the controller methods.
+
+The process is straightforward for each test:
+
+. Access the test logger.
+. Invoke the functionality.
+. Use the test logger to retrieve events.
+. Verify the events according to the scenario.
+
 [source, groovy]
 .src/integration-test/groovy/demo/PersonControllerIntSpec.groovy
 ----

@@ -1,3 +1,6 @@
+Slf4j Test handles POGO objects in the same fashion. In `AgeAdvisor`, recall the logger is established with the `@Slf4J` annotation.
+This does not alter the approach to verifying logs events.
+
 [source, groovy]
 .src/test/groovy/demo/AgeAdvisorSpec.groovy
 ----
