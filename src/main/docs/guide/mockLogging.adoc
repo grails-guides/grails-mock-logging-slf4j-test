@@ -1,6 +1,6 @@
 Slf4j Test is a test implementation of Slf4j that stores log messages in memory and provides methods to retrieving them for verification.
 It is basically a substitute implementation and should be the only one on the test classpath. To achieve this, declare the dependency and also
-exclude the main dependency from the testCompile build phase.
+exclude the Logback dependency from the testCompile build phase.
 
 [source, groovy]
 .build.gradle
@@ -17,3 +17,13 @@ include::{sourceDir}/build.gradle[tag=slf4jDependency]
 include::{sourceDir}/build.gradle[tag=excludeLogback]
 ----
 
+In addition, we will be using the `RestBuilder` for testing. Add this dependency below.
+
+[source, groovy]
+.build.gradle
+----
+dependencies {
+    ...
+include::{sourceDir}/build.gradle[tag=restclient]
+}
+----

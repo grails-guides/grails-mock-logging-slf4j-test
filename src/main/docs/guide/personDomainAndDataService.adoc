@@ -1,5 +1,12 @@
 We will create a Domain class `Person` with properties `name` and `age`.
 
+[source, bash]
+----
+> grails create-domain-class Person
+----
+
+Edit the class to end up like this:
+
 [source, groovy]
 .grails-app/domain/demo/Person.groovy
 ----
@@ -10,13 +17,7 @@ In order to create and find a student, we will use http://gorm.grails.org/6.1.x/
 automatically implements an interface to provide data access logic. This can be injected into another Grails artefact such as a Controller.
 
 [source, groovy]
-.grails-app/domain/demo/Person.groovy
-----
-include::{sourceDir}/grails-app/services/demo/PersonDataService.groovy[]
-----
-
-[source, groovy]
-.grails-app/domain/demo/Person.groovy
+.grails-app/services/demo/PersonDataService.groovy
 ----
 include::{sourceDir}/grails-app/services/demo/PersonDataService.groovy[]
 ----

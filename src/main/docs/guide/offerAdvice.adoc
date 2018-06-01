@@ -15,5 +15,4 @@ The POGO is simple and uses `@Slf4j` groovy annotation to establish the logger.
 include::{sourceDir}/src/main/groovy/demo/AgeAdvisor.groovy[]
 ----
 
-<1> Note the `@Slf4j` annotation - This needed for POGOs, as only Grails artefacts have logger injected by the Grails Framework.
-<2>
+<1> Note the `@Slf4j` annotation - This needed for POGOs, as only Grails artefacts have loggers injected by the Grails Framework.
