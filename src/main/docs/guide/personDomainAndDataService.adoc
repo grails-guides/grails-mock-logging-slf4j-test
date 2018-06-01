@@ -1,0 +1,5 @@
+[source, groovy]
+.grails-app/domain/demo/Person.groovy
+----
+include::{sourceDir}/grails-app/domain/demo/Person.groovy[]
+----

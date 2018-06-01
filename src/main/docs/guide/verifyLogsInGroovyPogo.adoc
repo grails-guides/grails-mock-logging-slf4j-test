@@ -1,0 +1,8 @@
+[source, groovy]
+.src/test/groovy/demo/AgeAdvisorSpec.groovy
+----
+include::{sourceDir}/src/test/groovy/demo/AgeAdvisorSpec.groovy[]
+----
+
+<1> In a POGO which uses `@Slf4j` Annotation, we simply retrieve the logger in the same manner.
+<2> Note we are able to validate multiple log events.

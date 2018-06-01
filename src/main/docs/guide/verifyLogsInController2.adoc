@@ -1,0 +1,9 @@
+[source, groovy]
+.src/integration-test/groovy/demo/PersonControllerIntSpec.groovy
+----
+include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecCreateUnsuccess]
+
+include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecAdvice]
+----
+
+<1> Notice we are accessing the logger for `demo.AgeAdvisor`. The factory is able to access any logger to verify activity.

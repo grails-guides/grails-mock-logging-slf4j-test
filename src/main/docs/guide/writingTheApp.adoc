@@ -1,1 +1,5 @@
-TODO: Complete the guide
+[source, groovy]
+.grails-app/conf/logback.groovy
+----
+include::{sourceDir}/grails-app/conf/logback.groovy[tag=logger]
+----

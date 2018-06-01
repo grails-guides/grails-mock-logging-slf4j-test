@@ -1,3 +1,4 @@
+// tag::personControllerCreate[]
 package demo
 
 import grails.validation.ValidationException
@@ -20,7 +21,9 @@ class PersonController {
             redirect action: "index"
         }
     }
+// end::personControllerCreate[]
 
+    // tag::personControllerOfferAdvice[]
     def offerAdvice(String name) {
         AgeAdvisor ageAdvisor = new AgeAdvisor()
 
@@ -32,4 +35,8 @@ class PersonController {
         }
         redirect action: "index"
     }
+    // end::personControllerOfferAdvice[]
+
+// tag::personControllerEnd[]
 }
+// end::personControllerEnd[]

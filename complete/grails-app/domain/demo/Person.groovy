@@ -11,4 +11,3 @@ class Person {
         "name: $name, age: $age"
     }
 }
-

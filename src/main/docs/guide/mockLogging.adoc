@@ -1,0 +1,14 @@
+[source, groovy]
+.build.gradle
+----
+dependencies {
+    ...
+include::{sourceDir}/build.gradle[tag=slf4jDependency]
+}
+----
+
+[source, groovy]
+.build.gradle
+----
+include::{sourceDir}/build.gradle[tag=excludeLogback]
+----

@@ -13,7 +13,7 @@ class AgeAdvisorSpec extends Specification {
     @Shared
     AgeAdvisor ageAdvisor = new AgeAdvisor()
     @Shared
-    TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor")
+    TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor") // <1>
 
     def cleanup() {
         TestLoggerFactory.clear()
@@ -26,7 +26,7 @@ class AgeAdvisorSpec extends Specification {
         ImmutableList<LoggingEvent> loggingEvents = logger.getLoggingEvents()
 
         then: "check the logging events"
-        loggingEvents.size() == 2
+        loggingEvents.size() == 2 // <2>
         loggingEvents[0].message == "You are a young and vibrant!"
         loggingEvents[0].level == Level.INFO
         loggingEvents[1].message == "Live life to the fullest."

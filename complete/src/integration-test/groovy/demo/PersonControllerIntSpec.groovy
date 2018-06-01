@@ -1,3 +1,4 @@
+// tag::PersonControllerIntSpecBegin[]
 package demo
 
 import com.google.common.collect.ImmutableList
@@ -17,26 +18,30 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory
 class PersonControllerIntSpec extends Specification {
 
     @Shared
-    TestLogger personControllerLogger = TestLoggerFactory.getTestLogger("demo.PersonController")
+    TestLogger personControllerLogger = TestLoggerFactory.getTestLogger("demo.PersonController") // <1>
     @Shared
     RestBuilder rest = new RestBuilder()
 
     def cleanup() {
-        TestLoggerFactory.clearAll()
+        TestLoggerFactory.clearAll() // <2>
     }
+// end::PersonControllerIntSpecBegin[]
 
+    // tag::PersonControllerIntSpecCreateSuccess[]
     void "test create person successful logs"() {
         when:"a person is created"
         RestResponse resp = rest.get("http://localhost:${serverPort}/person/createPerson?name=Nirav&age=40")
-        ImmutableList<LoggingEvent> loggingEvents = personControllerLogger.getAllLoggingEvents()
+        ImmutableList<LoggingEvent> loggingEvents = personControllerLogger.getAllLoggingEvents() // <3>
 
         then: "check the logging events"
         resp.status == 200
-        loggingEvents.size() == 1
-        loggingEvents[0].message == "person saved successfully: name: Nirav, age: 40"
+        loggingEvents.size() == 1 // <4>
+        loggingEvents[0].message == "person saved successfully: name: Nirav, age: 40" // <5>
         loggingEvents[0].level == Level.INFO
     }
+    // end::PersonControllerIntSpecCreateSuccess[]
 
+    // tag::PersonControllerIntSpecCreateUnsuccess[]
     void "test create person unsuccessful logs"() {
         when:"a person is created, but has a input error"
         RestResponse resp = rest.get("http://localhost:${serverPort}/person/createPerson?name=Bob&age=Twenty")
@@ -48,11 +53,13 @@ class PersonControllerIntSpec extends Specification {
         loggingEvents[0].message == "Error occurred on save!"
         loggingEvents[0].level == Level.ERROR
     }
+    // end::PersonControllerIntSpecCreateUnsuccess[]
 
+    // tag::PersonControllerIntSpecAdvice[]
     void "test offerAdvice to old person"() {
         given: "A person is already created"
         RestResponse resp = rest.get("http://localhost:${serverPort}/person/createPerson?name=John&age=35")
-        TestLogger ageAdvisorLogger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor")
+        TestLogger ageAdvisorLogger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor") // <1>
 
         when:"we ask for advice"
         resp = rest.get("http://localhost:${serverPort}/person/offerAdvice?name=John")
@@ -64,4 +71,8 @@ class PersonControllerIntSpec extends Specification {
         loggingEvents[0].message == "It's all downhill from here, sorry."
         loggingEvents[0].level == Level.WARN
     }
+    // end::PersonControllerIntSpecAdvice[]
+
+// tag::PersonControllerIntSpecEnd[]
 }
+// end::PersonControllerIntSpecEnd[]

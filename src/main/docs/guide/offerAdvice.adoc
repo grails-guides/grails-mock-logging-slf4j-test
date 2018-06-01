@@ -1,0 +1,5 @@
+[source, groovy]
+.grails-app/controllers/demo/PersonController.groovy
+----
+include::{sourceDir}/grails-app/controllers/demo/PersonController.groovy[tag=personControllerOfferAdvice]
+----

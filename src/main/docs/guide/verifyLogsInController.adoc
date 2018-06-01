@@ -1,0 +1,15 @@
+[source, groovy]
+.src/integration-test/groovy/demo/PersonControllerIntSpec.groovy
+----
+include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecBegin]
+
+include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecCreateSuccess]
+
+include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecEnd]
+----
+
+<1> Retrieve the test logger from `TestLoggerFactory` by using the logger name.
+<2> Clear in-memory logging events between tests.
+<3> Retrieve logging events so we can verify them.
+<4> Assert the size of the logging events.
+<5> Verify the message, and subsequently the log level.
