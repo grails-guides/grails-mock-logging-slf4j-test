@@ -1,4 +1,3 @@
-// tag::personDataService[]
 package demo
 
 import grails.gorm.services.Service
@@ -8,4 +7,3 @@ interface PersonDataService {
     Person findPerson(String name)
     Person savePerson(String name, Integer age)
 }
-// end::personDataService[]
