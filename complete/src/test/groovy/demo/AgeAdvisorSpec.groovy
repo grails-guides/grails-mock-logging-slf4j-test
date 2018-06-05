@@ -1,6 +1,7 @@
 package demo
 
 import com.google.common.collect.ImmutableList
+import example.grails.AgeAdvisor
 import spock.lang.Shared
 import spock.lang.Specification
 import uk.org.lidalia.slf4jext.Level

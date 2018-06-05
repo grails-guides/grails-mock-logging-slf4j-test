@@ -1,4 +1,4 @@
-package demo
+package example.grails
 
 import grails.gorm.services.Service
 

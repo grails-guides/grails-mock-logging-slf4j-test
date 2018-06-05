@@ -35,5 +35,5 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
 }
 
 // tag::logger[]
-logger("demo", DEBUG, ['STDOUT'])
+logger("example.grails", DEBUG, ['STDOUT'])
 // end::logger[]

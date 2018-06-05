@@ -3,8 +3,8 @@ Upon a successful save, log a message. On an unsuccessful save, catch the except
 `static scaffold = Person` to the controller for the convenience sake of a quick UI.
 
 [source, groovy]
-.grails-app/controllers/demo/PersonController.groovy
+.grails-app/controllers/example/grails/PersonController.groovy
 ----
-include::{sourceDir}/grails-app/controllers/demo/PersonController.groovy[tag=personControllerCreate]
-include::{sourceDir}/grails-app/controllers/demo/PersonController.groovy[tag=personControllerEnd]
+include::{sourceDir}/grails-app/controllers/example/grails/PersonController.groovy[tag=personControllerCreate]
+include::{sourceDir}/grails-app/controllers/example/grails/PersonController.groovy[tag=personControllerEnd]
 ----

@@ -9,13 +9,13 @@ The process is straightforward for each test:
 . Verify the events according to the scenario.
 
 [source, groovy]
-.src/integration-test/groovy/demo/PersonControllerIntSpec.groovy
+.src/integration-test/groovy/example/grails/PersonControllerIntSpec.groovy
 ----
-include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecBegin]
+include::{sourceDir}/src/integration-test/groovy/example/grails/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecBegin]
 
-include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecCreateSuccess]
+include::{sourceDir}/src/integration-test/groovy/example/grails/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecCreateSuccess]
 
-include::{sourceDir}/src/integration-test/groovy/demo/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecEnd]
+include::{sourceDir}/src/integration-test/groovy/example/grails/PersonControllerIntSpec.groovy[tag=PersonControllerIntSpecEnd]
 ----
 
 <1> Retrieve the test logger from `TestLoggerFactory` by using the logger name.

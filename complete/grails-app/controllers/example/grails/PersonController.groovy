@@ -1,5 +1,5 @@
 // tag::personControllerCreate[]
-package demo
+package example.grails
 
 import grails.validation.ValidationException
 import groovy.transform.CompileStatic

@@ -2,17 +2,17 @@ Implement another method in the `PersonController` which will offer advice based
 find a person by name, then use a POGO (Plain Old Groovy Object) called `AgeAdvisor`  for logging "friendly" advice.
 
 [source, groovy]
-.grails-app/controllers/demo/PersonController.groovy
+.grails-app/controllers/example/grails/PersonController.groovy
 ----
-include::{sourceDir}/grails-app/controllers/demo/PersonController.groovy[tag=personControllerOfferAdvice]
+include::{sourceDir}/grails-app/controllers/example/grails/PersonController.groovy[tag=personControllerOfferAdvice]
 ----
 
 The POGO is simple and uses `@Slf4j` groovy annotation to establish the logger.
 
 [source, groovy]
-.src/main/groovy/demo/AgeAdvisor.groovy
+.src/main/groovy/example/grails/AgeAdvisor.groovy
 ----
-include::{sourceDir}/src/main/groovy/demo/AgeAdvisor.groovy[]
+include::{sourceDir}/src/main/groovy/example/grails/AgeAdvisor.groovy[]
 ----
 
 <1> Note the `@Slf4j` annotation - This needed for POGOs, as only Grails artefacts have loggers injected by the Grails Framework.

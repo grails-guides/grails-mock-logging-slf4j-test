@@ -1,5 +1,5 @@
 // tag::PersonControllerIntSpecBegin[]
-package demo
+package example.grails
 
 import com.google.common.collect.ImmutableList
 import grails.gorm.transactions.Rollback

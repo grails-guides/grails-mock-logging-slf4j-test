@@ -1,4 +1,4 @@
-package demo
+package example.grails
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
