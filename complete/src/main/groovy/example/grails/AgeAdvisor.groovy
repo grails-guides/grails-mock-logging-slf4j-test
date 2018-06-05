@@ -8,7 +8,7 @@ import groovy.util.logging.Slf4j
 class AgeAdvisor {
 
     void offerAgeAdvice(Integer age) {
-        if (0 < age && age < 30 ) {
+        if (age in 0..<30 ) {
             log.info ("You are a young and vibrant!")
             log.info ("Live life to the fullest.")
         } else if (30 <= age) {
