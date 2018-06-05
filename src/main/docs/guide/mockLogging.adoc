@@ -1,4 +1,4 @@
-Slf4j Test is a test implementation of Slf4j that stores log messages in memory and provides methods to retrieving them for verification.
+https://projects.lidalia.org.uk/slf4j-test/[Slf4j Test] is a test implementation of Slf4j that stores log messages in memory and provides methods to retrieving them for verification.
 It is basically a substitute implementation and should be the only one on the test classpath. To achieve this, declare the dependency and also
 exclude the Logback dependency from the testCompile build phase.
 
