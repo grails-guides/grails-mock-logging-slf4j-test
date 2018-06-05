@@ -1,4 +1,4 @@
-package demo
+package example.grails
 
 import com.google.common.collect.ImmutableList
 import example.grails.AgeAdvisor
