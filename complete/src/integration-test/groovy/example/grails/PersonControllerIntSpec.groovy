@@ -18,7 +18,7 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory
 class PersonControllerIntSpec extends Specification {
 
     @Shared
-    TestLogger personControllerLogger = TestLoggerFactory.getTestLogger("demo.PersonController") // <1>
+    TestLogger personControllerLogger = TestLoggerFactory.getTestLogger("example.grails.PersonController") // <1>
     @Shared
     RestBuilder rest = new RestBuilder()
 
@@ -59,7 +59,7 @@ class PersonControllerIntSpec extends Specification {
     void "test offerAdvice to old person"() {
         given: "A person is already created"
         RestResponse resp = rest.get("http://localhost:${serverPort}/person/createPerson?name=John&age=35")
-        TestLogger ageAdvisorLogger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor") // <1>
+        TestLogger ageAdvisorLogger = TestLoggerFactory.getTestLogger("example.grails.AgeAdvisor") // <1>
 
         when:"we ask for advice"
         resp = rest.get("http://localhost:${serverPort}/person/offerAdvice?name=John")

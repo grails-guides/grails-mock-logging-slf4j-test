@@ -14,7 +14,7 @@ class AgeAdvisorSpec extends Specification {
     @Shared
     AgeAdvisor ageAdvisor = new AgeAdvisor()
     @Shared
-    TestLogger logger = TestLoggerFactory.getTestLogger("demo.AgeAdvisor") // <1>
+    TestLogger logger = TestLoggerFactory.getTestLogger("example.grails.AgeAdvisor") // <1>
 
     def cleanup() {
         TestLoggerFactory.clear()
