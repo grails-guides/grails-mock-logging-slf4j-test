@@ -67,7 +67,7 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "org.grails.plugins:geb"
     // tag::httpclient[]
-    testCompile "io.micronaut:micronaut-http-client:1.0.2"
+    testCompile "org.grails:grails-datastore-rest-client:6.1.9.RELEASE"
     // end::httpclient[]
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
     testCompile "org.seleniumhq.selenium:selenium-remote-driver:3.12.0"
